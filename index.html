@@ -16,9 +16,8 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Burger Menu -->
     <nav class="burger-menu" aria-label="Main navigation">
-        <button class="burger-icon" onclick="toggleMenu()" aria-expanded="false" aria-controls="menu-items">
+        <button class="burger-icon" aria-expanded="false" aria-controls="menu-items">
             <span class="visually-hidden">Toggle menu</span>
             <span></span>
             <span></span>
@@ -33,7 +32,7 @@
     <main class="container">
         <h1>🚨 HELP. MY GIRLFRIEND IS PREGNANT. 🚨</h1>
 
-        <section aria-labelledby="intro-heading">
+        <section aria-labelledby="intro-heading" class="intro">
             <h2 id="intro-heading">Introduction: The Backstory</h2>
             <p>Yo, FAM, I'm in deep <span class="highlight">sh*t</span>. My girl is <span class="highlight">12 days late</span>, and I might be <span class="highlight">completely rekt.</span> 🤯</p>
 
@@ -47,62 +46,86 @@
             </ul>
         </section>
 
-        <section aria-labelledby="why-heading">
+        <section aria-labelledby="why-heading" class="why">
             <h2 id="why-heading">Why $PREGGY? (The Master Plan)</h2>
             <p>Since I can't afford a lawyer, an escape plan, or even a proper pregnancy test without breaking the bank, there's only one option left:</p>
-
-            <p>🚀 We're launching a sh*tcoin.</p>
-            <p><span class="highlight">$PREGGY</span> is my last hope. Either this token pumps, or I'm doomed.<br>
+            <p class="highlight-box">🚀 We're launching a sh*tcoin.</p>
+            <p>$PREGGY is my last hope. Either this token pumps, or I'm doomed.<br>
             This isn't just a meme. This is a survival fund.</p>
-
-            <a href="#" class="btn">SEND ME TO THE MOON OR TO JAIL 🚀</a>
         </section>
 
         <section class="roadmap" aria-labelledby="roadmap-heading">
             <h2 id="roadmap-heading">Roadmap (If We Even Make It That Far)</h2>
-            <h3>Phase 1: Survive</h3>
-            <p>✅ Launch website & spread the story<br>
-               ✅ Get CT to believe in the Preggy Saga<br>
-               ✅ Prepare for launch (aka pray)</p>
-
-            <h3>Phase 2: The Pump & Escape Fund</h3>
-            <p>🚀 Launch $PREGGY on pump.fun<br>
-               🚀 Convince degens that my life depends on this<br>
-               🚀 Hope for a 100x before her dad finds out</p>
-
-            <h3>Phase 3: ???</h3>
-            <p>🤰 If we hit $1M MC, I propose<br>
-               🍼 If we hit $10M MC, I name the kid "Solana"<br>
-               🚀 If we hit $100M MC, we create a Degen Family Fund for other unexpected "life events"</p>
-        </section>
-
-        <section aria-labelledby="updates-heading">
-            <h2 id="updates-heading">Preggy Updates Coming Soon:</h2>
-            <p>Stay tuned for the pregnancy test, her dad's reaction, and my escape plan as we navigate this wild ride together.</p>
+            <div class="phase">
+                <h3>Phase 1: Survive</h3>
+                <ul>
+                    <li>✅ Launch website & spread the story</li>
+                    <li>✅ Get CT to believe in the Preggy Saga</li>
+                    <li>✅ Prepare for launch (aka pray)</li>
+                </ul>
+            </div>
+            <div class="phase">
+                <h3>Phase 2: The Pump & Escape Fund</h3>
+                <ul>
+                    <li>🚀 Launch $PREGGY on pump.fun</li>
+                    <li>🚀 Convince degens that my life depends on this</li>
+                    <li>🚀 Hope for a 100x before her dad finds out</li>
+                </ul>
+            </div>
+            <div class="phase">
+                <h3>Phase 3: ???</h3>
+                <ul>
+                    <li>🤰 If we hit $1M MC, I propose</li>
+                    <li>🍼 If we hit $10M MC, I name the kid "Solana"</li>
+                    <li>🚀 If we hit $100M MC, we create a Degen Family Fund</li>
+                </ul>
+            </div>
         </section>
 
         <section class="faq" aria-labelledby="faq-heading">
             <h2 id="faq-heading">FAQ (Freaking Asked Questions)</h2>
-            <p>❓ Is this a joke? <br> No, my life is on the line.</p>
-            <p>❓ Will this moon? <br> Depends on how desperate CT is.</p>
-            <p>❓ What if this flops? <br> Then I'm calling my lawyer. Wait, I can't afford one.</p>
-            <p>❓ Why should I buy? <br> Because you like chaos.</p>
+            <div class="faq-item">
+                <h3>❓ Is this a joke?</h3>
+                <p>No, my life is literally on the line.</p>
+            </div>
+            <div class="faq-item">
+                <h3>❓ Will this moon?</h3>
+                <p>Depends on how desperate CT is.</p>
+            </div>
+            <div class="faq-item">
+                <h3>❓ What if this flops?</h3>
+                <p>Then I'm calling my lawyer. Wait, I can't afford one.</p>
+            </div>
+            <div class="faq-item">
+                <h3>❓ Why should I buy?</h3>
+                <p>Because you like chaos and helping desperate degens.</p>
+            </div>
         </section>
 
-        <section aria-labelledby="final-words-heading">
-            <h2 id="final-words-heading">Final Words:</h2>
-            <p>This is not just another token launch - it's my lifeline.<br>
-            I'm trusting CT, the gods of crypto, and sheer degen luck to help me flip my fate.<br>
-            Buy <span class="highlight">$PREGGY</span>, share this story, and join the wildest, most desperate ride of your life.</p>
-
-            <p>Let's turn this disaster into a degen legend. Let's f***ing go. 🔥🔥🔥</p>
+        <section aria-labelledby="token-info" class="token-info">
+            <h2 id="token-info">Token Information</h2>
+            <div class="info-grid">
+                <div class="info-item">
+                    <h3>Contract</h3>
+                    <p class="mono">Coming Soon</p>
+                </div>
+                <div class="info-item">
+                    <h3>Total Supply</h3>
+                    <p>69,420,000,000</p>
+                </div>
+                <div class="info-item">
+                    <h3>Tax</h3>
+                    <p>0/0</p>
+                </div>
+                <div class="info-item">
+                    <h3>Max Wallet</h3>
+                    <p>4.20%</p>
+                </div>
+            </div>
         </section>
 
         <footer class="footer">
-            <p>&copy; 2025 $PREGGY - All rights degenerated.</p>
-            <div class="disclaimer">
-                <p>DISCLAIMER: This token is for entertainment purposes only. Nothing on this website constitutes financial advice. Crypto investments are highly risky - never invest more than you can afford to lose. This is a meme token - treat it as such.</p>
-            </div>
+            <p>&copy; 2025 $PREGGY - All rights reserved.</p>
         </footer>
     </main>
 
