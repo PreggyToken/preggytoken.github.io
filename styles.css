@@ -35,7 +35,32 @@ body {
     line-height: 1.6;
 }
 
-/* Improved burger menu styles */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Typography */
+h1 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    animation: pulse 2s infinite;
+}
+
+h2 {
+    color: var(--secondary-color);
+    margin: 25px 0 15px;
+    font-size: 1.8rem;
+}
+
+.highlight {
+    color: var(--secondary-color);
+    font-weight: bold;
+}
+
+/* Burger Menu */
 .burger-menu {
     position: fixed;
     top: 20px;
@@ -53,17 +78,127 @@ body {
     padding: 0;
 }
 
-/* Rest of your existing styles, organized by components */
-/* ... */
-
-/* Improved accessibility focus styles */
-a:focus,
-button:focus {
-    outline: 2px solid var(--primary-color);
-    outline-offset: 2px;
+.burger-icon span {
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background: var(--primary-color);
+    border-radius: 3px;
+    transition: all 0.3s ease;
 }
 
-/* Responsive improvements */
+.burger-icon span:nth-child(1) { top: 0; }
+.burger-icon span:nth-child(2) { top: 11px; }
+.burger-icon span:nth-child(3) { top: 22px; }
+
+.burger-icon.active span:nth-child(1) {
+    transform: rotate(45deg);
+    top: 11px;
+}
+
+.burger-icon.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.burger-icon.active span:nth-child(3) {
+    transform: rotate(-45deg);
+    top: 11px;
+}
+
+.menu-items {
+    position: fixed;
+    top: 60px;
+    right: 20px;
+    background: var(--menu-background);
+    padding: 20px;
+    border-radius: 10px;
+    display: none;
+    backdrop-filter: blur(5px);
+    border: 1px solid var(--menu-border);
+}
+
+.menu-items.active {
+    display: block;
+    animation: fadeIn 0.3s ease;
+}
+
+.menu-items a {
+    display: block;
+    color: var(--text-color);
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 5px 0;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    background: rgba(255, 0, 119, 0.1);
+}
+
+.menu-items a:hover {
+    background: rgba(255, 0, 119, 0.3);
+    transform: translateX(-5px);
+}
+
+/* Sections */
+.roadmap, .faq {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 25px;
+    border-radius: 10px;
+    margin: 30px 0;
+    backdrop-filter: blur(5px);
+}
+
+/* Situation List */
+.situation-list {
+    list-style: none;
+    margin: 20px 0;
+    text-align: left;
+    max-width: 500px;
+    margin: 20px auto;
+}
+
+.situation-list li {
+    margin: 10px 0;
+    padding: 10px;
+    background: rgba(255, 0, 119, 0.1);
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.situation-list li:hover {
+    transform: translateX(10px);
+    background: rgba(255, 0, 119, 0.2);
+}
+
+/* Footer */
+.footer {
+    margin-top: 50px;
+    padding-top: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.9rem;
+    color: gray;
+}
+
+.disclaimer {
+    font-size: 0.8rem;
+    color: #666;
+    padding: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Animations */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Media Queries */
 @media (prefers-reduced-motion: reduce) {
     * {
         animation: none !important;
@@ -72,5 +207,14 @@ button:focus {
 }
 
 @media (max-width: 768px) {
-    /* Your existing mobile styles */
+    h1 { font-size: 2rem; }
+    .container { padding: 10px; }
+    .burger-menu {
+        top: 10px;
+        right: 10px;
+    }
+    .menu-items {
+        top: 50px;
+        right: 10px;
+    }
 }
