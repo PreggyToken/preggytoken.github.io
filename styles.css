@@ -1,0 +1,76 @@
+/* Reset and base styles */
+:root {
+    --primary-color: #ff0077;
+    --secondary-color: #ffcc00;
+    --background-color: #000;
+    --text-color: #fff;
+    --menu-background: rgba(0, 0, 0, 0.9);
+    --menu-border: rgba(255, 0, 119, 0.3);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Accessibility improvements */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+/* Improved burger menu styles */
+.burger-menu {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.burger-icon {
+    width: 35px;
+    height: 25px;
+    position: relative;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    padding: 0;
+}
+
+/* Rest of your existing styles, organized by components */
+/* ... */
+
+/* Improved accessibility focus styles */
+a:focus,
+button:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+/* Responsive improvements */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Your existing mobile styles */
+}
